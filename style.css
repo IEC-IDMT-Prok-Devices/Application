@@ -403,6 +403,36 @@ h3 {
   float: right;
 }
 
+#table5 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 10px;
+  opacity: 0.7;
+}
+
+#table5 td,
+#table5 th {
+  border: 1px solid white;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+#table5 {
+  background-color: #000000;
+}
+
+#table5 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #000000;
+  /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
+  color: rgb(255, 255, 255);
+}
+
 /************************************3rd page*/
 #IDMTTheory {
   width: 100%;
