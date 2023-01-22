@@ -115,6 +115,8 @@ document.querySelector("#actualTT").addEventListener("click", function () {
   );
 });
 
+function highcharts(){};
+
 /*generate new manual curve*/
 function curveGenerator() {
   //Generate graph
