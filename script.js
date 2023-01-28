@@ -3,9 +3,9 @@ let garphTitle = "1.3 curve";
 let inputInterv = document.querySelector("#Interval").value;
 $("#submitbtn").click(function () {
   if (
-    document.querySelector(".PMS").value >= 1.1 &&
-    document.querySelector(".PMS").value <= 20 &&
-    document.querySelector(".TMS").value >= 1.0 &&
+    document.querySelector(".PMS").value >= 1.3 &&
+    document.querySelector(".PMS").value <= 40 &&
+    document.querySelector(".TMS").value >= 0.01 &&
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == 1.3
   ) {
@@ -14,7 +14,12 @@ $("#submitbtn").click(function () {
 
     const calcT = (1.3 / (Math.log(pms) / Math.LN10)) * tms;
     X = Number(calcT.toFixed(2));
-    document.querySelector(".T").textContent = X;
+    if (X < 0.03) {
+      document.querySelector(".T").textContent = 0.03;
+      alert("You have reached minimum operating range of the relay");
+    } else {
+      document.querySelector(".T").textContent = X;
+    }
 
     $("#table1").append(
       "<tr><td>" +
@@ -28,9 +33,9 @@ $("#submitbtn").click(function () {
     newarr.push(Number(document.querySelector(".T").textContent));
     console.log(newarr);
   } else if (
-    document.querySelector(".PMS").value >= 1.1 &&
-    document.querySelector(".PMS").value <= 20 &&
-    document.querySelector(".TMS").value >= 0.1 &&
+    document.querySelector(".PMS").value >= 1.3 &&
+    document.querySelector(".PMS").value <= 40 &&
+    document.querySelector(".TMS").value >= 0.01 &&
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == "NI"
   ) {
@@ -39,7 +44,12 @@ $("#submitbtn").click(function () {
 
     const calcT = (0.14 / (Math.pow(pms, 0.02) - 1)) * tms;
     X = Number(calcT.toFixed(2));
-    document.querySelector(".T").textContent = X;
+    if (X < 0.03) {
+      document.querySelector(".T").textContent = 0.03;
+      alert("You have reached minimum operating range of the relay");
+    } else {
+      document.querySelector(".T").textContent = X;
+    }
 
     $("#table1").append(
       "<tr><td>" +
@@ -52,9 +62,9 @@ $("#submitbtn").click(function () {
 
     newarr.push(Number(document.querySelector(".T").textContent));
   } else if (
-    document.querySelector(".PMS").value >= 1.1 &&
-    document.querySelector(".PMS").value <= 20 &&
-    document.querySelector(".TMS").value >= 0.1 &&
+    document.querySelector(".PMS").value >= 1.3 &&
+    document.querySelector(".PMS").value <= 40 &&
+    document.querySelector(".TMS").value >= 0.01 &&
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == "0.6sec"
   ) {
@@ -63,7 +73,12 @@ $("#submitbtn").click(function () {
 
     const calcT = (0.6 / (Math.log(pms) / Math.LN10)) * tms;
     X = Number(calcT.toFixed(2));
-    document.querySelector(".T").textContent = X;
+    if (X < 0.03) {
+      document.querySelector(".T").textContent = 0.03;
+      alert("You have reached minimum operating range of the relay");
+    } else {
+      document.querySelector(".T").textContent = X;
+    }
 
     $("#table1").append(
       "<tr><td>" +
@@ -76,9 +91,9 @@ $("#submitbtn").click(function () {
 
     newarr.push(Number(document.querySelector(".T").textContent));
   } else if (
-    document.querySelector(".PMS").value >= 1.1 &&
-    document.querySelector(".PMS").value <= 20 &&
-    document.querySelector(".TMS").value >= 0.1 &&
+    document.querySelector(".PMS").value >= 1.3 &&
+    document.querySelector(".PMS").value <= 40 &&
+    document.querySelector(".TMS").value >= 0.01 &&
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == "VI"
   ) {
@@ -87,8 +102,12 @@ $("#submitbtn").click(function () {
 
     const calcT = (13.5 / (pms - 1)) * tms;
     X = Number(calcT.toFixed(2));
-    document.querySelector(".T").textContent = X;
-
+    if (X < 0.03) {
+      document.querySelector(".T").textContent = 0.03;
+      alert("You have reached minimum operating range of the relay");
+    } else {
+      document.querySelector(".T").textContent = X;
+    }
     $("#table1").append(
       "<tr><td>" +
         Number($(".TMS").val()) +
@@ -100,9 +119,9 @@ $("#submitbtn").click(function () {
 
     newarr.push(Number(document.querySelector(".T").textContent));
   } else if (
-    document.querySelector(".PMS").value >= 1.1 &&
-    document.querySelector(".PMS").value <= 20 &&
-    document.querySelector(".TMS").value >= 0.1 &&
+    document.querySelector(".PMS").value >= 1.3 &&
+    document.querySelector(".PMS").value <= 40 &&
+    document.querySelector(".TMS").value >= 0.01 &&
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == "EI"
   ) {
@@ -111,7 +130,12 @@ $("#submitbtn").click(function () {
 
     const calcT = (80 / (Math.pow(pms, 2) - 1)) * tms;
     X = Number(calcT.toFixed(2));
-    document.querySelector(".T").textContent = X;
+    if (X < 0.03) {
+      document.querySelector(".T").textContent = 0.03;
+      alert("You have reached minimum operating range of the relay");
+    } else {
+      document.querySelector(".T").textContent = X;
+    }
 
     $("#table1").append(
       "<tr><td>" +
@@ -175,12 +199,12 @@ function curveGenerator() {
       accessibility: {
         rangeDescription: "Range: 0.1 to 1000",
       },
-      /* plotBands: {
-        from: 0.3,
-        to: 0.3,
-        color: "#DF5353",
-        thickness: "1%",
-      },*/
+      plotBands: {
+        from: 0.03,
+        to: 0.03,
+        color: "red",
+        thickness: "5%",
+      },
     },
     plotOptions: {
       line: {
@@ -204,14 +228,14 @@ function curveGenerator() {
         data: newarr,
       },
       {
-        lineColor: "White",
+        lineColor: "rgba (255, 255, 255, 0)",
         name: "",
         color: "#ffffff",
         dataLabels: {
           enabled: false,
         },
         data: [
-          0.1, 0.02, 0.03, 0.04, 0.05, 0.06, 0.08, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1,
+          0.03, 0.1, 0.04, 0.04, 0.04, 0.04, 0.04, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1,
           0.1, 0.1, 0.1, 0.1, 0.1, 100,
         ],
       },
@@ -243,6 +267,7 @@ function autoCurveGenerator() {
         "200",
         "300",
         "1000",
+        "10000",
       ],
     },
     title: {
