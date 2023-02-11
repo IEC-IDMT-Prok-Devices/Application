@@ -458,8 +458,8 @@ function testReport13() {
   $("#table4").append("<tr><td>" + 1.18 + "</td></tr>");
   $("#table4").append("<tr><td>" + 1.159 + "</td></tr>");
 
-  for (let i = 0; i < actualTripTime.length; i++) {
-    D = (((actualTripTime[i] - tested13[i]) / tripTime[i]) * 100).toFixed(3);
+  for (let i = 0; i < tested13.length; i++) {
+    D = (((tested13[i] - tripTime[i]) / tripTime[i]) * 100).toFixed(3);
     deviation.push(D);
     $("#table5").append("<tr><td>" + D + "</td></tr>");
   }
@@ -632,8 +632,8 @@ function testReportEI() {
   $("#table4").append("<tr><td>" + 0.426 + "</td></tr>");
   $("#table4").append("<tr><td>" + 0.4 + "</td></tr>");
 
-  for (let i = 0; i < actualTripTime.length; i++) {
-    D = (((actualTripTime[i] - tested13[i]) / tripTime[i]) * 100).toFixed(3);
+  for (let i = 0; i < EItested.length; i++) {
+    D = (((EItested[i] - tripTime[i]) / tripTime[i]) * 100).toFixed(3);
     deviation.push(D);
     $("#table5").append("<tr><td>" + D + "</td></tr>");
   }
