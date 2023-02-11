@@ -468,3 +468,53 @@ h3 {
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+#removeallTT {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+#newTMS {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+#tested13 {
+  width: 100%;
+  margin-left: 0px;
+  display: inline-block;
+  border: 5px solid rgb(201, 26, 232);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+#EItested {
+  width: 100%;
+  margin-left: 0px;
+  display: inline-block;
+  border: 5px solid rgb(201, 26, 232);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+#testreport {
+  margin-top: 50px;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ccc;
+}
