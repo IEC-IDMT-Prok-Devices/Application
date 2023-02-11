@@ -419,6 +419,229 @@ function removeAllTT() {
   }
 }
 
-document.querySelector("#removeallTT").addEventListener("click", function () {
-  removeAllTT();
+//****************************************************** */
+tested13 = [
+  89.37, 16.188, 6.3, 4.294, 3.394, 2.88, 2.555, 2.322, 2.003, 1.897, 1.806,
+  1.728, 1.663, 1.6, 1.555, 1.504, 1.461, 1.429, 1.398, 1.364, 1.343, 1.309,
+  1.295, 1.271, 1.247, 1.231, 1.209, 1.205, 1.187, 1.157,
+];
+function testReport13() {
+  //**************************************************************1.3
+  $("#table4").append("<tr><td>" + 89.37 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 16.188 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 6.301 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 4.329 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 3.394 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 2.881 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 2.555 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 2.322 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 2.003 + "</td></tr>"); //11
+  $("#table4").append("<tr><td>" + 1.897 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.806 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.728 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.663 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.6 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.555 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.504 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.461 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.429 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.398 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.364 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.343 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.309 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.295 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.271 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.247 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.231 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.209 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.205 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.18 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.159 + "</td></tr>");
+
+  for (let i = 0; i < actualTripTime.length; i++) {
+    D = (((actualTripTime[i] - tested13[i]) / tripTime[i]) * 100).toFixed(3);
+    deviation.push(D);
+    $("#table5").append("<tr><td>" + D + "</td></tr>");
+  }
+  //Generate graph
+  $("#graph").highcharts({
+    title: {
+      text: "Ideal V/S Actual IDMT Curve",
+    },
+    xAxis: {
+      categories: PSMVal,
+    },
+    yAxis: {
+      title: {
+        text: "<b>Trip Time</b>",
+      },
+      type: "logarithmic",
+      minorTickInterval: 0.1,
+      accessibility: {
+        rangeDescription: "Range: 0.1 to 1000",
+      },
+      /* plotBands: {
+            from: 0.3,
+            to: 0.3,
+            color: "#DF5353",
+            thickness: "1%",
+          },*/
+    },
+    chart: {
+      type: "line",
+      zoomType: "y",
+      panning: true,
+      panKey: "shift",
+    },
+    series: [
+      {
+        name: "Ideal Trip Time",
+        lineColor: "green",
+        color: "black",
+        data: tripTime,
+      },
+      {
+        name: "Actual Trip Time",
+        lineColor: "red",
+        color: "black",
+        data: tested13,
+        tooltip: {
+          headerFormat: "<b>{point.x}</b>  ",
+          pointFormatter: function () {
+            return (
+              this.series.name +
+              ": " +
+              this.y +
+              "<br/>(" +
+              (
+                ((this.y - this.series.chart.series[0].data[this.x].y) /
+                  this.series.chart.series[0].data[this.x].y) *
+                100
+              ).toFixed(3) +
+              "%)"
+            );
+          },
+        },
+      },
+    ],
+  });
+}
+
+EItested = [
+  172.11, 49.5, 26.068, 16.421, 11.438, 8.481, 6.555, 5.229, 4.276, 3.563,
+  3.014, 2.593, 2.244, 1.963, 1.736, 1.543, 1.385, 1.248, 1.129, 1.024, 0.938,
+  0.86, 0.785, 0.735, 0.675, 0.628, 0.588, 0.547, 0.515, 0.475, 0.448, 0.423,
+  0.4,
+];
+
+//********************************************EI */
+function testReportEI() {
+  $("#graph").highcharts({
+    title: {
+      text: "Ideal V/S Actual IDMT Curve",
+    },
+    xAxis: {
+      categories: PSMVal,
+    },
+    yAxis: {
+      title: {
+        text: "<b>Trip Time</b>",
+      },
+      type: "logarithmic",
+      minorTickInterval: 0.1,
+      accessibility: {
+        rangeDescription: "Range: 0.1 to 1000",
+      },
+      /* plotBands: {
+            from: 0.3,
+            to: 0.3,
+            color: "#DF5353",
+            thickness: "1%",
+          },*/
+    },
+    chart: {
+      type: "line",
+      zoomType: "y",
+      panning: true,
+      panKey: "shift",
+    },
+    series: [
+      {
+        name: "Ideal Trip Time",
+        lineColor: "green",
+        color: "black",
+        data: tripTime,
+      },
+      {
+        name: "Actual Trip Time",
+        lineColor: "red",
+        color: "black",
+        data: EItested,
+        tooltip: {
+          headerFormat: "<b>{point.x}</b>  ",
+          pointFormatter: function () {
+            return (
+              this.series.name +
+              ": " +
+              this.y +
+              "<br/>(" +
+              (
+                ((this.y - this.series.chart.series[0].data[this.x].y) /
+                  this.series.chart.series[0].data[this.x].y) *
+                100
+              ).toFixed(3) +
+              "%)"
+            );
+          },
+        },
+      },
+    ],
+  });
+
+  $("#table4").append("<tr><td>" + 172.11 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 49.516 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 26.068 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 16.421 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 11.438 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 8.481 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 6.555 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 5.229 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 4.276 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 3.563 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 3.014 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 2.593 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 2.244 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.963 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.736 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.543 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.385 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.248 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.129 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 1.024 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.938 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.86 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.785 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.735 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.675 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.628 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.588 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.547 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.515 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.475 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.448 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.426 + "</td></tr>");
+  $("#table4").append("<tr><td>" + 0.4 + "</td></tr>");
+
+  for (let i = 0; i < actualTripTime.length; i++) {
+    D = (((actualTripTime[i] - tested13[i]) / tripTime[i]) * 100).toFixed(3);
+    deviation.push(D);
+    $("#table5").append("<tr><td>" + D + "</td></tr>");
+  }
+}
+
+document.querySelector("#tested13").addEventListener("click", function () {
+  testReport13();
+});
+document.querySelector("#EItested").addEventListener("click", function () {
+  testReportEI();
 });
