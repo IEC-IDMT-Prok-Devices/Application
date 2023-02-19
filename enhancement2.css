@@ -1,0 +1,184 @@
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+#navbar {
+  background-color: #6da9d2;
+  background: linear-gradient(to right, #010101 20%, #ffff 100%);
+}
+#IDMT {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+#Product {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+#TMS {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+#PSM {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+.bootstrap-select {
+  width: 100% !important;
+  margin-left: 10px !important;
+}
+.bootstrap-select .btn {
+  padding: 5px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+#table1 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 10px;
+  opacity: 0.7;
+}
+
+#table1 td,
+#table1 th {
+  border: 1px solid white;
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+#table1 {
+  background-color: #000000;
+}
+
+#table1 th {
+  text-align: center;
+  background-color: #000000;
+  /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
+  color: rgb(255, 255, 255);
+}
+
+/******************************************************table11*/
+#table11 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 10px;
+  opacity: 0.7;
+}
+
+#table11 td,
+#table11 th {
+  border: 1px solid white;
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+#table11 {
+  background-color: #000000;
+}
+
+#table11 th {
+  text-align: center;
+  background-color: #000000;
+  /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
+  color: rgb(255, 255, 255);
+}
+
+#readarray {
+  width: 100%;
+  margin-left: 10px;
+  display: inline-block;
+  border: 3px solid rgb(91, 221, 58);
+  border-radius: 4px;
+  box-sizing: content-box;
+  box-sizing: border-box;
+  opacity: 0.9;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#removerow {
+  width: 100%;
+  margin-left: 10px;
+  display: inline-block;
+  border: 3px solid rgb(250, 53, 19);
+  border-radius: 4px;
+  opacity: 0.9;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#submitbtn {
+  width: 100%;
+  margin-left: 10px;
+  display: inline-block;
+  border: 3px solid rgb(238, 142, 39);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#export {
+  width: 100%;
+  margin-left: 10px;
+  display: inline-block;
+  border: 3px solid rgb(238, 142, 39);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#T {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  color: black;
+  box-sizing: border-box;
+  background-color: #1267b3;
+  background: linear-gradient(to left, #1267b3 50%, #ffff 100%);
+  margin-left: 10px;
+  opacity: 0.9;
+}
