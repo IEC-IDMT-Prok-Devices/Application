@@ -5,7 +5,7 @@ body {
 }
 #navbar {
   background-color: #6da9d2;
-  background: linear-gradient(to right, #010101 20%, #ffff 100%);
+  background: linear-gradient(to left, #010101 20%, #ffff 100%);
 }
 #IDMT {
   width: 100%;
@@ -181,4 +181,13 @@ body {
   background: linear-gradient(to left, #1267b3 50%, #ffff 100%);
   margin-left: 10px;
   opacity: 0.9;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
