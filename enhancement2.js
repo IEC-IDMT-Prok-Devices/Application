@@ -325,6 +325,9 @@ function Convert_HTML_To_PDF() {
   $("#line1").show();
   $("#line2").show();
   $("#relayname").show();
+  $("#report3").show();
+  $("#line3").show();
+  $("#line4").show();
 
   document.getElementById("CurveName").style.marginTop = "40px";
   //document.getElementById("graph").style.marginTop = "90px";
@@ -332,7 +335,7 @@ function Convert_HTML_To_PDF() {
   document.getElementById("table1").style.marginTop = "0px";
   $("#tableoutput").remove();
   $(".bootstrap-select").remove();
-   html2pdf(element, {
+  html2pdf(element, {
     jsPDF: { format: "a2" },
   });
 }
@@ -349,4 +352,7 @@ $(window).ready(function () {
   $("#line1").hide();
   $("#line2").hide();
   $("#productIMG").show();
+  $("#report3").hide();
+  $("#line3").hide();
+  $("#line4").hide();
 });
