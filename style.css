@@ -464,7 +464,7 @@ h3 {
 }
 
 #userpageheading {
-  margin-top: 100px;
+  margin-top: 50px;
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -479,6 +479,18 @@ h3 {
   box-sizing: border-box;
   margin-left: 10px;
   opacity: 0.9;
+}
+#reportgen {
+  width: 100%;
+  margin-left: 10px;
+  font-size: larger;
+  display: inline-block;
+  border: 5px solid rgb(233, 184, 36);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  font-weight: bold;
+  padding: 0px;
 }
 #newTMS {
   width: 100%;
