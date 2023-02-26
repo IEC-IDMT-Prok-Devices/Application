@@ -332,9 +332,9 @@ function Convert_HTML_To_PDF() {
   document.getElementById("table1").style.marginTop = "0px";
   $("#tableoutput").remove();
   $(".bootstrap-select").remove();
-  html2pdf(element, {
+   html2pdf(element, {
     jsPDF: { format: "a2" },
-  }).save("Testreport.pdf");
+  });
 }
 
 function fun1() {
