@@ -37,42 +37,60 @@
     <script src="js/jsPDF/dist/jspdf.umd.js"></script>
     <title>IDMT Calculator</title>
   </head>
-  <body background="bg8.jfif" style="opacity: 1" ;>
+  <body background="\bg8.jfif" style="opacity: 1" ;>
     <div class="fluid-container" id="seg1">
-      <div class="row" id="userpage">
-        <div class="row">
-          <div class="col-sm-3"></div>
-          <div class="col-sm-6" style="text-align: center">
-            <h1 id="userpageheading" style="color: white">
-              Welcome , please select the Application!
-            </h1>
+      <div class="container">
+        <div class="row" id="userpage">
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6" style="text-align: center">
+              <h1 id="userpageheading" style="color: white">
+                Welcome , please select the Application!
+              </h1>
+            </div>
+            <div class="col-lg-3"></div>
           </div>
-        </div>
-        <br /><br />
-        <div class="col-sm-3"></div>
-        <div class="col-sm-3">
-          <button
-            class="btn check"
-            id="IDMTTheory"
-            style="margin-left: 10px"
-            onclick="window.location.href='https://adithya0707.github.io/Trip-Time-Calculator/IDMTCalculator.html';"
-          >
-            IDMT Calculator with Graph
-          </button>
-        </div>
-        <div class="col-sm-3">
-          <button
-            class="btn check"
-            id="AcualvsIdeal"
-            class="btn-download"
-            style="margin-left: 10px"
-            onclick="window.location.href='https://adithya0707.github.io/Trip-Time-Calculator/ActualvsIdeal.html';"
-          >
-            Actual vs Ideal Trip Time for relay
-          </button>
+          <br /><br />
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3">
+              <button
+                class="btn check"
+                id="IDMTTheory"
+                onclick="window.location.href='https://adithya0707.github.io/Trip-Time-Calculator/IDMTCalculator.html';"
+              >
+                IDMT Calculator with Graph
+              </button>
+            </div>
+            <div class="col-lg-3">
+              <button
+                class="btn check"
+                id="AcualvsIdeal"
+                class="btn-download"
+                onclick="window.location.href='https://adithya0707.github.io/Trip-Time-Calculator/ActualvsIdeal.html';"
+              >
+                Actual vs Ideal Trip Time
+              </button>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+              <button
+                class="btn check"
+                id="reportgen"
+                class="btn-download"
+                onclick="window.location.href='https://adithya0707.github.io/Trip-Time-Calculator/Reports.html';"
+              >
+                Reports
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
