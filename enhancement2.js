@@ -341,7 +341,7 @@ function Convert_HTML_To_PDF() {
 }
 
 function fun1() {
-  saveAsExcel("table1", "table..xls");
+  saveAsExcel("table1", "table.xls");
   Convert_HTML_To_PDF();
 }
 
