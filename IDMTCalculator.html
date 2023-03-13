@@ -37,7 +37,7 @@
       </div>
       <br />
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-3">
           <!--  <form>
               <select id="In">
                 <option value="Select In" selected>Select Current(In)</option>
@@ -61,22 +61,22 @@
           <input type="number" class="TMS" placeholder="Enter TMS" />
           <p class="T">Trip Time appears here!!</p>
           <div class="row">
-            <div class="col-sm-2">
+            <div class="col-lg-4">
               <button class="btn check" id="submitbtn">Add</button>
             </div>
-            <div class="col-sm-2">
+            <div class="col-lg-4">
               <button class="btn check" id="readarray">Graph</button>
             </div>
-            <div class="col-sm-2">
+            <div class="col-lg-4">
               <button class="btn check" id="removerow">Del</button>
             </div>
           </div>
           <br />
           <div clas="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-4">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
               <button class="btn check" id="export" class="btn-download">
-                Export Table
+                Export
               </button>
             </div>
           </div>
@@ -117,10 +117,10 @@
             </select>
           </form>
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-lg-6">
               <button class="btn check" id="AutoGraph">Graph</button>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-6">
               <button class="btn check" id="AutoGraphAll">
                 Generate All
               </button>
@@ -128,24 +128,27 @@
           </div>
           <br />
         </div>
-        <div class="container" id="tables">
-          <div id="tabs">
-            <div class="col-sm-6" id="tab1">
-              <table id="table1" style="margin-top: 10px">
-                <th>TMS</th>
-                <th>PSM</th>
-              </table>
-            </div>
-            <div class="col-sm-4" id="tab2">
-              <table id="table2" style="margin-top: 10px">
-                <th>Trip Time</th>
-              </table>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-8">
+          <div class="container" id="tables">
+            <div id="tabs">
+              <div class="col-sm-6" id="tab1">
+                <table id="table1" style="margin-top: 10px">
+                  <th>TMS</th>
+                  <th>PSM</th>
+                </table>
+              </div>
+              <div class="col-sm-4" id="tab2">
+                <table id="table2" style="margin-top: 10px">
+                  <th>Trip Time</th>
+                </table>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="container" id="tabs" style="width: 100%">
-          <br />
-          <div id="graph" class="tabs" style="width: 50%; height: 200%"></div>
+          <div class="container" id="tabs" style="width: 100%">
+            <br />
+            <div id="graph" class="tabs"></div>
+          </div>
         </div>
       </div>
     </div>
