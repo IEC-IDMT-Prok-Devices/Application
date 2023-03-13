@@ -2133,6 +2133,7 @@ document.querySelector("#AutoGraphAll").addEventListener("click", function () {
   VIAll();
   EIAll();
   autoCurveGeneratorAll();
+  document.getElementById("export").style.display = "none";
 });
 
 //To delete last row
@@ -2144,13 +2145,18 @@ document.querySelector("#removerow").addEventListener("click", function () {
 
 //export
 function Convert_HTML_To_PDF() {
-  const element = document.getElementById("tabs");
-
+  const element = document.getElementById("graphandtable");
   html2pdf().from(element).save();
 }
 
 document.querySelector("#export").addEventListener("click", function () {
-  Convert_HTML_To_PDF();
+  const element = document.getElementById("graphandtable");
+  document.getElementById("export").style.display = "none";
+  document.getElementById("autogenerateheading").style.color = "black";
+
+  html2pdf(element, {
+    jsPDF: { format: "a3" },
+  });
 });
 
 /**************************************SECOND REQUIREMENT****************** */
