@@ -6,7 +6,7 @@ body {
 
 .PMS {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -15,9 +15,10 @@ body {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 #In {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -26,9 +27,10 @@ body {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 #IDMT {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -37,9 +39,10 @@ body {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 .TMS {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -48,9 +51,10 @@ body {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 .T {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid rgb(255, 255, 255);
@@ -62,9 +66,10 @@ body {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 #submitbtn {
   width: 100%;
-
+  padding: 0px;
   margin-left: 10px;
   display: inline-block;
   border: 5px solid rgb(238, 142, 39);
@@ -72,8 +77,10 @@ body {
   box-sizing: border-box;
   opacity: 0.9;
 }
+
 #export {
   width: 100%;
+  padding: 0px;
   margin-left: 0px;
   display: inline-block;
   border: 5px solid rgb(201, 26, 232);
@@ -81,6 +88,7 @@ body {
   box-sizing: border-box;
   opacity: 0.9;
 }
+
 #table1 {
   float: left;
   font-family: Arial, Helvetica, sans-serif;
@@ -97,6 +105,7 @@ body {
   color: rgb(255, 255, 255);
   font-weight: 700;
 }
+
 #tables {
   height: 300px;
   overflow-y: scroll;
@@ -112,8 +121,8 @@ body {
 }
 
 #table1 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
   background-color: #000000;
   /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
@@ -144,8 +153,8 @@ body {
 }
 
 #table2 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
   background-color: #000000;
   /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
@@ -154,6 +163,7 @@ body {
 
 #readarray {
   width: 100%;
+  padding: 0px;
   margin-left: 10px;
   display: inline-block;
   border: 5px solid rgb(91, 221, 58);
@@ -162,8 +172,10 @@ body {
   opacity: 0.9;
   text-align: center;
 }
+
 #removerow {
   width: 100%;
+  padding: 0px;
   margin-left: 10px;
   display: inline-block;
   border: 5px solid rgb(250, 53, 19);
@@ -172,26 +184,31 @@ body {
   opacity: 0.9;
   text-align: center;
 }
+
 h1 {
   padding-left: 18px;
   font-weight: 200;
   font-family: "Times New Roman", Times, serif;
   color: #360202;
 }
+
 #navbar {
   background-color: #6da9d2;
   background: linear-gradient(to right, #010101 20%, #ffff 100%);
 }
+
 #graph {
   float: right;
 }
+
 h3 {
   color: white;
   float: Left;
 }
+
 #IDMT_Auto_Generate {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -200,9 +217,10 @@ h3 {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 #Interval {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -211,9 +229,10 @@ h3 {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 #iterations {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -228,9 +247,10 @@ h3 {
   font-size: 30px;
   font-style: italic;
 }
+
 #AutoGraph {
   width: 100%;
-  padding: 12px 20px;
+  padding: 0px;
   margin-left: 10px;
   display: inline-block;
   border: 5px solid rgb(91, 221, 58);
@@ -238,9 +258,10 @@ h3 {
   box-sizing: border-box;
   opacity: 0.9;
 }
+
 #AutoGraphAll {
   width: 100%;
-  padding: 12px 20px;
+  padding: 0px;
   margin-left: 10px;
   display: inline-block;
   border: 5px solid rgb(91, 221, 58);
@@ -252,7 +273,7 @@ h3 {
 /* Second****************************************************/
 .PS {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -264,7 +285,7 @@ h3 {
 
 .secur {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -276,7 +297,7 @@ h3 {
 
 .timerec {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -285,8 +306,9 @@ h3 {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 .timerec {
-  width: 50%;
+  width: 5%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -296,9 +318,10 @@ h3 {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 .triptimeActual {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -307,9 +330,10 @@ h3 {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 .P {
   width: 50%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid rgb(255, 255, 255);
@@ -344,8 +368,8 @@ h3 {
 }
 
 #table3 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
   background-color: #000000;
   /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
@@ -374,8 +398,8 @@ h3 {
 }
 
 #table4 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
   background-color: #000000;
   /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
@@ -384,6 +408,7 @@ h3 {
 
 #actualTT {
   width: 100%;
+  padding: 0px;
   margin-left: 10px;
   display: inline-block;
   border: 5px solid rgb(250, 53, 19);
@@ -397,10 +422,12 @@ h3 {
   width: 40px;
   height: 40px;
 }
+
 #removelastactualTT {
   width: 40px;
   height: 40px;
-  float: right;
+  float: left;
+
 }
 
 #table5 {
@@ -425,8 +452,8 @@ h3 {
 }
 
 #table5 th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
   background-color: #000000;
   /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
@@ -471,7 +498,7 @@ h3 {
 
 #removeallTT {
   width: 100%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -480,6 +507,7 @@ h3 {
   margin-left: 10px;
   opacity: 0.9;
 }
+
 #reportgen {
   width: 100%;
   margin-left: 10px;
@@ -492,9 +520,10 @@ h3 {
   font-weight: bold;
   padding: 0px;
 }
+
 #newTMS {
   width: 100%;
-  padding: 12px 20px;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
