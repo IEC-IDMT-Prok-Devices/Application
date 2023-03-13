@@ -38,7 +38,7 @@
       </div>
       <br />
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-3">
           <form>
             <select id="In">
               <option value="Select In" selected>Select Relay Rating</option>
@@ -65,13 +65,13 @@
           <p class="T">Trip Time appears here!!</p>
           <p class="P">PSM appears here!!</p>
           <div class="row">
-            <div class="col-sm-2">
+            <div class="col-lg-4">
               <button class="btn check" id="submitbtn">Add</button>
             </div>
-            <div class="col-sm-1">
+            <div class="col-lg-2">
               <img id="removelastentry" src="trash.png" alt="unfinished bingo card" onclick="removePSM_TT()" />
             </div>
-            <div class="col-sm-2">
+            <div class="col-lg-4">
               <button class="btn check" id="actualTT">Actual TT</button>
             </div>
             <div class="col-sm-2">
@@ -81,12 +81,12 @@
           <br />
 
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-lg-6">
               <button class="btn check" id="readarray" style="margin-left: 10px">
                 Generate Graph
               </button>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-6">
               <button class="btn check" id="export" class="btn-download" style="margin-left: 10px">
                 Export Table
               </button>
@@ -107,38 +107,41 @@
           </div>-->
           <br />
         </div>
-        <div class="container" id="tables">
-          <div id="tabs">
-            <div class="col-sm-2" id="tab1">
-              <table id="table1" style="margin-top: 10px">
-                <th>TMS</th>
-              </table>
-            </div>
-            <div class="col-sm-2" id="tab3">
-              <table id="table3" style="margin-top: 10px">
-                <th>PSM</th>
-              </table>
-            </div>
-            <div class="col-sm-2" id="tab2">
-              <table id="table2" style="margin-top: 10px">
-                <th>TT</th>
-              </table>
-            </div>
-            <div class="col-sm-2" id="tab2">
-              <table id="table4" style="margin-top: 10px">
-                <th>ACT-TT</th>
-              </table>
-            </div>
-            <div class="col-sm-2" id="tab2">
-              <table id="table5" style="margin-top: 10px; color: red">
-                <th>Deviation</th>
-              </table>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-8">
+          <div class="container" id="tables">
+            <div id="tabs">
+              <div class="col-sm-2" id="tab1">
+                <table id="table1" style="margin-top: 10px">
+                  <th>TMS</th>
+                </table>
+              </div>
+              <div class="col-sm-2" id="tab3">
+                <table id="table3" style="margin-top: 10px">
+                  <th>PSM</th>
+                </table>
+              </div>
+              <div class="col-sm-2" id="tab2">
+                <table id="table2" style="margin-top: 10px">
+                  <th>TT</th>
+                </table>
+              </div>
+              <div class="col-sm-2" id="tab2">
+                <table id="table4" style="margin-top: 10px">
+                  <th>ACT-TT</th>
+                </table>
+              </div>
+              <div class="col-sm-2" id="tab2">
+                <table id="table5" style="margin-top: 10px; color: red">
+                  <th>Deviation</th>
+                </table>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="container" id="tabs" style="width: 100%">
-          <br />
-          <div id="graph" class="tabs" style="width: 50%; height: 200%"></div>
+          <div class="container" id="tabs" style="width: 100%">
+            <br />
+            <div id="graph" class="tabs"></div>
+          </div>
         </div>
       </div>
     </div>
