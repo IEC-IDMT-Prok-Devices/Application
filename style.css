@@ -13,7 +13,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -26,7 +26,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -39,7 +39,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -52,7 +52,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -68,7 +68,7 @@ body {
   background-color: #1267b3;
   background: linear-gradient(to left, #1267b3 50%, #ffff 100%);
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -220,7 +220,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -233,7 +233,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -246,14 +246,16 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
 #autogenerateheading {
+  margin-left: 15px;
   color: azure;
-  font-size: 30px;
+  font-size: 17px;
   font-style: italic;
+  font-weight: 900;
 }
 
 #AutoGraph {
@@ -288,7 +290,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -313,7 +315,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -326,7 +328,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -339,7 +341,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
@@ -355,7 +357,7 @@ h3 {
   background-color: #1267b3;
   background: linear-gradient(to left, #1267b3 50%, #ffff 100%);
   margin-left: 10px;
-  margin-right: 10px;
+
   opacity: 0.9;
 }
 
