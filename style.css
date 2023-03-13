@@ -5,7 +5,7 @@ body {
 }
 
 .PMS {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -17,7 +17,7 @@ body {
 }
 
 #In {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -29,7 +29,7 @@ body {
 }
 
 #IDMT {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -41,7 +41,7 @@ body {
 }
 
 .TMS {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -53,7 +53,7 @@ body {
 }
 
 .T {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -81,7 +81,7 @@ body {
 #export {
   width: 100%;
   padding: 0px;
-  margin-left: 0px;
+  margin-left: 10px;
   display: inline-block;
   border: 5px solid rgb(201, 26, 232);
   border-radius: 4px;
@@ -198,7 +198,7 @@ h1 {
 }
 
 #graph {
-  float: right;
+  float: center;
 }
 
 h3 {
@@ -207,7 +207,7 @@ h3 {
 }
 
 #IDMT_Auto_Generate {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -219,7 +219,7 @@ h3 {
 }
 
 #Interval {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -231,7 +231,7 @@ h3 {
 }
 
 #iterations {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -272,7 +272,7 @@ h3 {
 
 /* Second****************************************************/
 .PS {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -284,7 +284,7 @@ h3 {
 }
 
 .secur {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -296,7 +296,7 @@ h3 {
 }
 
 .timerec {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -320,7 +320,7 @@ h3 {
 }
 
 .triptimeActual {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -332,7 +332,7 @@ h3 {
 }
 
 .P {
-  width: 50%;
+  width: 100%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -558,4 +558,10 @@ h3 {
   font-style: italic;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #ccc;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-color: #87ceeb;
+  }
 }
