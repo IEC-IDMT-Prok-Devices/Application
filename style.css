@@ -13,6 +13,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -25,6 +26,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -37,6 +39,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -49,6 +52,7 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -64,6 +68,7 @@ body {
   background-color: #1267b3;
   background: linear-gradient(to left, #1267b3 50%, #ffff 100%);
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -215,6 +220,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -227,6 +233,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -239,6 +246,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -280,6 +288,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -304,6 +313,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -316,6 +326,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -328,6 +339,7 @@ h3 {
   border-radius: 4px;
   box-sizing: border-box;
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -343,6 +355,7 @@ h3 {
   background-color: #1267b3;
   background: linear-gradient(to left, #1267b3 50%, #ffff 100%);
   margin-left: 10px;
+  margin-right: 10px;
   opacity: 0.9;
 }
 
@@ -427,7 +440,6 @@ h3 {
   width: 40px;
   height: 40px;
   float: left;
-
 }
 
 #table5 {
@@ -472,6 +484,7 @@ h3 {
   text-align: center;
   font-weight: bold;
   font-size: larger;
+  padding: 0px;
 }
 
 #AcualvsIdeal {
@@ -484,6 +497,7 @@ h3 {
   box-sizing: border-box;
   opacity: 0.9;
   font-weight: bold;
+  padding: 0px;
 }
 
 #userpage {
