@@ -9,6 +9,9 @@ $("#submitbtn").click(function () {
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == 1.3
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
+
     const tms = document.querySelector(".TMS").value;
     const pms = document.querySelector(".PMS").value;
 
@@ -26,6 +29,8 @@ $("#submitbtn").click(function () {
         Number($(".TMS").val()) +
         "</td><td>" +
         Number($(".PMS").val()) +
+        "</td><td>" +
+        Number($(".T").text()) +
         "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
@@ -39,6 +44,9 @@ $("#submitbtn").click(function () {
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == "NI"
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
+
     const tms = document.querySelector(".TMS").value;
     const pms = document.querySelector(".PMS").value;
 
@@ -56,6 +64,8 @@ $("#submitbtn").click(function () {
         Number($(".TMS").val()) +
         "</td><td>" +
         Number($(".PMS").val()) +
+        "</td><td>" +
+        Number($(".T").text()) +
         "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
@@ -68,6 +78,9 @@ $("#submitbtn").click(function () {
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == "0.6sec"
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6Sec";
+
     const tms = document.querySelector(".TMS").value;
     const pms = document.querySelector(".PMS").value;
 
@@ -85,6 +98,8 @@ $("#submitbtn").click(function () {
         Number($(".TMS").val()) +
         "</td><td>" +
         Number($(".PMS").val()) +
+        "</td><td>" +
+        Number($(".T").text()) +
         "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
@@ -97,6 +112,8 @@ $("#submitbtn").click(function () {
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == "VI"
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     const tms = document.querySelector(".TMS").value;
     const pms = document.querySelector(".PMS").value;
 
@@ -113,6 +130,8 @@ $("#submitbtn").click(function () {
         Number($(".TMS").val()) +
         "</td><td>" +
         Number($(".PMS").val()) +
+        "</td><td>" +
+        Number($(".T").text()) +
         "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
@@ -125,6 +144,8 @@ $("#submitbtn").click(function () {
     document.querySelector(".TMS").value <= 1.6 &&
     document.querySelector("#IDMT").value == "EI"
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     const tms = document.querySelector(".TMS").value;
     const pms = document.querySelector(".PMS").value;
 
@@ -142,6 +163,8 @@ $("#submitbtn").click(function () {
         Number($(".TMS").val()) +
         "</td><td>" +
         Number($(".PMS").val()) +
+        "</td><td>" +
+        Number($(".T").text()) +
         "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
@@ -162,7 +185,7 @@ function curveGenerator() {
   //Generate graph
   $("#graph").highcharts({
     title: {
-      text: "IDMT Curve",
+      text: "",
     },
     xAxis: {
       title: {
@@ -271,7 +294,7 @@ function autoCurveGenerator() {
       ],
     },
     title: {
-      text: "IDMT Curve",
+      text: "",
     },
     yAxis: {
       title: {
@@ -345,7 +368,13 @@ function onePointThreeInt1_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -364,7 +393,13 @@ function onePointThreeInt1_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -383,7 +418,13 @@ function onePointThreeInt1_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -403,7 +444,13 @@ function onePointThreeInt2_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -422,7 +469,13 @@ function onePointThreeInt2_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -441,7 +494,13 @@ function onePointThreeInt2_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -461,7 +520,13 @@ function onePointThreeInt15_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -480,7 +545,13 @@ function onePointThreeInt15_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -499,7 +570,13 @@ function onePointThreeInt15_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -518,7 +595,13 @@ function onePointThreeInt25_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -537,7 +620,13 @@ function onePointThreeInt25_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -556,7 +645,13 @@ function onePointThreeInt25_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -578,7 +673,13 @@ function NI1_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -597,7 +698,13 @@ function NI1_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -616,7 +723,13 @@ function NI1_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -636,7 +749,13 @@ function NI2_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -655,7 +774,13 @@ function NI2_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -674,7 +799,13 @@ function NI2_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -694,7 +825,13 @@ function NI15_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -713,7 +850,13 @@ function NI15_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -732,7 +875,13 @@ function NI15_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -751,7 +900,13 @@ function NI25_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -770,7 +925,13 @@ function NI25_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -789,7 +950,13 @@ function NI25_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -811,7 +978,13 @@ function zeropointsix1_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -830,7 +1003,13 @@ function zeropointsix1_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -849,7 +1028,13 @@ function zeropointsix1_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -869,7 +1054,13 @@ function zeropointsix2_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -888,7 +1079,13 @@ function zeropointsix2_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -907,7 +1104,13 @@ function zeropointsix2_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -927,7 +1130,13 @@ function zeropointsix15_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -946,7 +1155,13 @@ function zeropointsix15_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -965,7 +1180,13 @@ function zeropointsix15_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -984,7 +1205,13 @@ function zeropointsix25_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1003,7 +1230,13 @@ function zeropointsix25_10_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1022,7 +1255,13 @@ function zeropointsix25_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1044,7 +1283,13 @@ function VI1_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><<td>" +
+        Number($(".T").text()) +
+        "</td>/tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1063,7 +1308,13 @@ function VI1_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1082,7 +1333,13 @@ function VI1_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1102,7 +1359,13 @@ function VI2_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1121,7 +1384,13 @@ function VI2_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1140,7 +1409,13 @@ function VI2_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1160,7 +1435,13 @@ function VI15_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1179,7 +1460,13 @@ function VI15_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1198,7 +1485,13 @@ function VI15_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1217,7 +1510,13 @@ function VI25_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1236,7 +1535,13 @@ function VI25_10_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1255,7 +1560,13 @@ function VI25_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1277,7 +1588,13 @@ function EI1_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1296,7 +1613,13 @@ function EI1_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1315,7 +1638,13 @@ function EI1_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1335,7 +1664,13 @@ function EI2_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1354,7 +1689,13 @@ function EI2_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1373,7 +1714,13 @@ function EI2_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1393,7 +1740,13 @@ function EI15_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1412,7 +1765,13 @@ function EI15_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1431,7 +1790,13 @@ function EI15_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1450,7 +1815,13 @@ function EI25_20() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1469,7 +1840,13 @@ function EI25_10_10() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1488,7 +1865,13 @@ function EI25_15() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr2[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr2[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     autoGenCurve.push(X);
@@ -1504,6 +1887,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt1_10();
     autoCurveGenerator();
   } else if (
@@ -1511,6 +1896,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt1_20();
     autoCurveGenerator();
   } else if (
@@ -1518,6 +1905,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt1_15();
     autoCurveGenerator();
   } else if (
@@ -1525,6 +1914,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt2_20();
     autoCurveGenerator();
   } else if (
@@ -1532,6 +1923,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt2_15();
     autoCurveGenerator();
   } else if (
@@ -1539,6 +1932,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt2_10();
     autoCurveGenerator();
   } else if (
@@ -1546,6 +1941,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt15_20();
     autoCurveGenerator();
   } else if (
@@ -1553,6 +1950,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt15_10();
     autoCurveGenerator();
   } else if (
@@ -1560,6 +1959,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt15_15();
     autoCurveGenerator();
   } else if (
@@ -1567,6 +1968,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt25_20();
     autoCurveGenerator();
   } else if (
@@ -1574,6 +1977,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt25_10();
     autoCurveGenerator();
   } else if (
@@ -1581,6 +1986,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == 1.3 &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 1.3Sec";
     onePointThreeInt25_15();
     autoCurveGenerator();
   }
@@ -1591,6 +1998,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI1_10();
     autoCurveGenerator();
   } else if (
@@ -1598,6 +2007,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI1_20();
     autoCurveGenerator();
   } else if (
@@ -1605,6 +2016,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI1_15();
     autoCurveGenerator();
   } else if (
@@ -1612,6 +2025,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI2_20();
     autoCurveGenerator();
   } else if (
@@ -1626,6 +2041,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI2_10();
     autoCurveGenerator();
   } else if (
@@ -1633,6 +2050,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI15_20();
     autoCurveGenerator();
   } else if (
@@ -1640,6 +2059,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI15_10();
     autoCurveGenerator();
   } else if (
@@ -1647,6 +2068,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI15_15();
     autoCurveGenerator();
   } else if (
@@ -1654,6 +2077,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI25_20();
     autoCurveGenerator();
   } else if (
@@ -1661,6 +2086,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI25_10();
     autoCurveGenerator();
   } else if (
@@ -1668,6 +2095,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "NI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : NI";
     NI25_15();
     autoCurveGenerator();
   }
@@ -1679,6 +2108,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI1_10();
     autoCurveGenerator();
   } else if (
@@ -1686,6 +2117,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI1_20();
     autoCurveGenerator();
   } else if (
@@ -1693,6 +2126,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI1_15();
     autoCurveGenerator();
   } else if (
@@ -1700,6 +2135,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI2_20();
     autoCurveGenerator();
   } else if (
@@ -1707,6 +2144,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI2_15();
     autoCurveGenerator();
   } else if (
@@ -1714,6 +2153,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI2_10();
     autoCurveGenerator();
   } else if (
@@ -1721,6 +2162,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI15_20();
     autoCurveGenerator();
   } else if (
@@ -1728,6 +2171,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI15_10();
     autoCurveGenerator();
   } else if (
@@ -1735,6 +2180,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI15_15();
     autoCurveGenerator();
   } else if (
@@ -1742,6 +2189,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI25_20();
     autoCurveGenerator();
   } else if (
@@ -1749,6 +2198,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI25_10();
     autoCurveGenerator();
   } else if (
@@ -1756,6 +2207,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "VI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : VI";
     VI25_15();
     autoCurveGenerator();
   }
@@ -1767,6 +2220,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix1_10();
     autoCurveGenerator();
   } else if (
@@ -1774,6 +2229,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix1_20();
     autoCurveGenerator();
   } else if (
@@ -1781,6 +2238,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix1_15();
     autoCurveGenerator();
   } else if (
@@ -1788,6 +2247,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix2_20();
     autoCurveGenerator();
   } else if (
@@ -1795,6 +2256,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix2_15();
     autoCurveGenerator();
   } else if (
@@ -1802,6 +2265,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix2_10();
     autoCurveGenerator();
   } else if (
@@ -1809,6 +2274,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix15_20();
     autoCurveGenerator();
   } else if (
@@ -1823,6 +2290,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix15_15();
     autoCurveGenerator();
   } else if (
@@ -1830,6 +2299,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix25_20();
     autoCurveGenerator();
   } else if (
@@ -1837,6 +2308,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix25_10();
     autoCurveGenerator();
   } else if (
@@ -1844,6 +2317,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "0.6sec" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : 0.6sec";
     zeropointsix25_15();
     autoCurveGenerator();
   }
@@ -1855,6 +2330,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI1_10();
     autoCurveGenerator();
   } else if (
@@ -1862,6 +2339,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI1_20();
     autoCurveGenerator();
   } else if (
@@ -1876,6 +2355,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI2_20();
     autoCurveGenerator();
   } else if (
@@ -1883,6 +2364,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI2_15();
     autoCurveGenerator();
   } else if (
@@ -1890,6 +2373,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI2_10();
     autoCurveGenerator();
   } else if (
@@ -1897,6 +2382,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI15_20();
     autoCurveGenerator();
   } else if (
@@ -1904,6 +2391,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI15_10();
     autoCurveGenerator();
   } else if (
@@ -1911,6 +2400,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI15_15();
     autoCurveGenerator();
   } else if (
@@ -1918,6 +2409,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 20
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI25_20();
     autoCurveGenerator();
   } else if (
@@ -1925,6 +2418,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 10
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI25_10();
     autoCurveGenerator();
   } else if (
@@ -1932,6 +2427,8 @@ document.querySelector("#AutoGraph").addEventListener("click", function () {
     document.querySelector("#IDMT_Auto_Generate").value == "EI" &&
     document.querySelector("#iterations").value == 15
   ) {
+    document.querySelector("#tableappearsbelow").textContent =
+      "Curve Type : EI";
     EI25_15();
     autoCurveGenerator();
   }
@@ -2081,7 +2578,13 @@ function zeropointsix2All() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr22[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr22[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     zeroPointSix.push(X);
@@ -2100,7 +2603,13 @@ function VIAll() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr23[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr23[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     VI.push(X);
@@ -2119,7 +2628,13 @@ function EIAll() {
     document.querySelector(".T").textContent = X;
 
     $("#table1").append(
-      "<tr><td>" + 1 + "</td><td>" + newarr24[x] + "</td></tr>"
+      "<tr><td>" +
+        1 +
+        "</td><td>" +
+        newarr24[x] +
+        "</td><td>" +
+        Number($(".T").text()) +
+        "</td></tr>"
     );
     $("#table2").append("<tr><td>" + Number($(".T").text()) + "</td></tr>");
     EI.push(X);
@@ -2146,13 +2661,15 @@ document.querySelector("#removerow").addEventListener("click", function () {
 //export
 function Convert_HTML_To_PDF() {
   const element = document.getElementById("graphandtable");
+  document.querySelector("#tableappearsbelow").style.color = "black";
+  $("#export").remove();
   html2pdf().from(element).save();
 }
 
 document.querySelector("#export").addEventListener("click", function () {
   const element = document.getElementById("graphandtable");
-  document.getElementById("export").style.display = "none";
-  document.getElementById("autogenerateheading").style.color = "black";
+  document.querySelector("#tableappearsbelow").style.color = "black";
+  $("#export").remove();
 
   html2pdf(element, {
     jsPDF: { format: "a3" },
