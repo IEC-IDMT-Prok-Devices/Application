@@ -14,6 +14,8 @@ $("#submitbtn").click(function () {
   ) {
     //1.3 IDMT***************************************
     if (document.querySelector("#IDMT").value == 1.3) {
+      document.querySelector("#tableappearsbelow").textContent =
+        "Curve Type : 1.3Sec";
       //Calculating PSM
       const CalcPSM = Number(InjectIn) / (Number(PS) * Number(In));
       Y = Number(CalcPSM.toFixed(2));
@@ -23,21 +25,27 @@ $("#submitbtn").click(function () {
         const calcT = (1.3 / (Math.log(Y) / Math.LN10)) * TMS;
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
-          );
+          // $("#table2").append(
+          //   "<tr><td>" + Number($(".T").text()) + "</td></tr>"
+          // );
+          // $("#table3").append(
+          //   "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          // );
         } else {
           alert("you have reached minimum operating range of the relay");
         }
@@ -45,20 +53,20 @@ $("#submitbtn").click(function () {
         const calcT = (1.3 / (Math.log(20) / Math.LN10)) * TMS;
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
-          );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
         } else {
           alert("you have reached minimum operating range of the relay");
@@ -69,6 +77,9 @@ $("#submitbtn").click(function () {
     }
     //IDMT  NI*******************************
     if (document.querySelector("#IDMT").value == "NI") {
+      document.querySelector("#tableappearsbelow").textContent =
+        "Curve Type : NI";
+
       const CalcPSM = Number(InjectIn) / (Number(PS) * Number(In));
       Y = Number(CalcPSM.toFixed(2));
       document.querySelector(".P").textContent = Y;
@@ -77,20 +88,20 @@ $("#submitbtn").click(function () {
         const calcT = (0.14 / (Math.pow(Y, 0.02) - 1)) * TMS; //NI
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
-          );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
         } else {
           alert("you have reached minimum operating range of the relay");
@@ -99,20 +110,20 @@ $("#submitbtn").click(function () {
         const calcT = (0.14 / (Math.pow(20, 0.02) - 1)) * TMS; //NI
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
-          );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
         } else {
           alert("you have reached minimum operating range of the relay");
@@ -123,6 +134,9 @@ $("#submitbtn").click(function () {
     }
     //IDMT 0.6sec***************
     if (document.querySelector("#IDMT").value == "0.6sec") {
+      document.querySelector("#tableappearsbelow").textContent =
+        "Curve Type : 0.6Sec";
+
       const CalcPSM = Number(InjectIn) / (Number(PS) * Number(In));
       Y = Number(CalcPSM.toFixed(2));
       document.querySelector(".P").textContent = Y;
@@ -131,20 +145,20 @@ $("#submitbtn").click(function () {
         const calcT = (0.6 / (Math.log(Y) / Math.LN10)) * TMS; //0.6
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
-          );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
         } else {
           alert("you have reached minimum operating range of the relay");
@@ -153,20 +167,20 @@ $("#submitbtn").click(function () {
         const calcT = (0.6 / (Math.log(20) / Math.LN10)) * TMS; //0.6
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
-          );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
         } else {
           alert("you have reached minimum operating range of the relay");
@@ -177,6 +191,9 @@ $("#submitbtn").click(function () {
     }
     //IDMT VI************************
     if (document.querySelector("#IDMT").value == "VI") {
+      document.querySelector("#tableappearsbelow").textContent =
+        "Curve Type : VI";
+
       const CalcPSM = Number(InjectIn) / (Number(PS) * Number(In));
       Y = Number(CalcPSM.toFixed(2));
       document.querySelector(".P").textContent = Y;
@@ -185,20 +202,20 @@ $("#submitbtn").click(function () {
         const calcT = (13.5 / (Y - 1)) * TMS; //VI
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
-          );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
         } else {
           alert("you have reached minimum operating range of the relay");
@@ -207,20 +224,20 @@ $("#submitbtn").click(function () {
         const calcT = (13.5 / (20 - 1)) * TMS; //VI
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
-          );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
         } else {
           alert("you have reached minimum operating range of the relay");
@@ -231,6 +248,9 @@ $("#submitbtn").click(function () {
     }
     //IDMT EI
     if (document.querySelector("#IDMT").value == "EI") {
+      document.querySelector("#tableappearsbelow").textContent =
+        "Curve Type : EI";
+
       const CalcPSM = Number(InjectIn) / (Number(PS) * Number(In));
       Y = Number(CalcPSM.toFixed(2));
       document.querySelector(".P").textContent = Y;
@@ -239,20 +259,20 @@ $("#submitbtn").click(function () {
         const calcT = (80 / (Math.pow(Y, 2) - 1)) * TMS; //EI
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
-          );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
         } else {
           alert("you have reached minimum operating range of the relay");
@@ -261,20 +281,20 @@ $("#submitbtn").click(function () {
         const calcT = (80 / (Math.pow(20, 2) - 1)) * TMS; //EI
         X = Number(calcT.toFixed(2));
         if (X > 0.03) {
-          $("#table1").append(
-            "<tr><td>" + Number($(".TMS").val()) + "</td></tr>"
-          );
           document.querySelector(".T").textContent = X;
 
           //Pushing values to array for garph plot
           tripTime.push(Number(document.querySelector(".T").textContent));
           PSMVal.push(Number(document.querySelector(".P").textContent));
 
-          $("#table2").append(
-            "<tr><td>" + Number($(".T").text()) + "</td></tr>"
-          );
-          $("#table3").append(
-            "<tr><td>" + Number($(".P").text()) + "</td></tr>"
+          $("#table1").append(
+            "<tr><td>" +
+              Number($(".TMS").val()) +
+              "</td><td>" +
+              Number($(".P").text()) +
+              "</td><td>" +
+              Number($(".T").text()) +
+              "</td></tr>"
           );
         } else {
           alert("you have reached minimum operating range of the relay");
@@ -387,14 +407,15 @@ function removePSM_TT() {
   tripTime.pop();
   PSMVal.pop();
 }
-function Convert_HTML_To_PDF() {
-  const element = document.getElementById("tabs");
-
-  html2pdf().from(element).save();
-}
+function Convert_HTML_To_PDF() {}
 
 document.querySelector("#export").addEventListener("click", function () {
-  Convert_HTML_To_PDF();
+  const element = document.getElementById("tableandgraph");
+  document.querySelector("#tableappearsbelow").style.color = "black";
+  $("#export").remove();
+  html2pdf(element, {
+    jsPDF: { format: "a3" },
+  });
 });
 
 //((this.y - this.series.chart.series[0].data[this.x].y) /
