@@ -4,6 +4,8 @@ actualTripTime = [];
 deviation = [];
 secInjCur = [0, 0];
 $("#submitbtn").click(function () {
+  const actsl = document.querySelector("#serialno").value;
+  document.querySelector("#actslno").textContent = actsl;
   const InjectIn = document.querySelector(".secur").value;
   const PS = document.querySelector(".PS").value;
   const In = document.querySelector("#In").value;
