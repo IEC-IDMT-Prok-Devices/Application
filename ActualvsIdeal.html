@@ -1,254 +1,601 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
-    <script
-      src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
-      type="text/javascript"
-    ></script>
-    <script src="SimpleChart.js"></script>
-    <script
-      type="text/javascript"
-      src="js/HTMLtable2chart/graficarBarras.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="js/HTMLtable2chart/tabla2array.js"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https:/highcharts/highcharts.js"></script>
-    <!-- jsPDF library -->
-    <script src="js/jsPDF/dist/jspdf.umd.js"></script>
-    <title>IDMT Calculator</title>
-  </head>
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 
-  <body background="bg8.jfif" style="opacity: 1">
-    <div class="fluid-container" id="seg1">
-      <div class="container" style="width: 100%">
-        <div class="row" id="navbar" class="rep">
-          <div class="col-lg-1">
-            <img
-              src="Logo_prk.jfif"
-              alt=""
-              style="width: 65px; height: 55px; float: left; padding-left: 0px"
-            />
-          </div>
-          <div class="col-lg-11>">
-            <img
-              src="final_logo1.png"
-              style="float: right; width: 180px; height: 55px"
-            />
-          </div>
-        </div>
-        <br />
-        <div class="row">
-          <div class="col-lg-3">
-            <input
-              type="text"
-              id="serialno"
-              placeholder="Enter Relay Serial Number"
-              title="Enter Relay Serial Number"
-            />
-            <form>
-              <select title="Select Relay Rating" id="In">
-                <option value="Select In" selected>Select Relay Rating</option>
-                <option value="1">1A</option>
-                <option value="5">5A</option>
-              </select>
-            </form>
-            <form>
-              <select title="Select IDMT Curve" id="IDMT">
-                <option value="Select In" selected>Select IDMT Curve</option>
-                <option value="1.3">1.3</option>
-                <option value="3sec">3sec</option>
-                <option value="NI">NI</option>
-                <option value="VI">VI</option>
-                <option value="EI">EI</option>
-                <option value="RI">RI</option>
-                <option value="0.6sec">0.6sec</option>
-              </select>
-            </form>
-            <input
-              type="number"
-              class="TMS"
-              placeholder="Enter TMS"
-              title="Enter TMS"
-            />
-            <input
-              type="number"
-              class="PS"
-              placeholder="Enter Plug Setting"
-              title="Enter PSM"
-            />
-            <input
-              type="number"
-              class="secur"
-              placeholder="Enter Secondary Current"
-              title="Enter Secondary Current"
-            />
-            <input
-              type="number"
-              class="triptimeActual"
-              placeholder="Enter actual Trip time values (Relay Timer)"
-              title="Enter actual Trip time values (Relay Timer)"
-            />
-            <p class="T" title="Trip Time Appears here">
-              Trip Time appears here!!
-            </p>
-            <p class="P" title="PSM appears here!!">PSM appears here!!</p>
-            <div class="row">
-              <div class="col-lg-4">
-                <button class="btn check" id="submitbtn">Add</button>
-              </div>
-              <div class="col-lg-2">
-                <img
-                  id="removelastentry"
-                  src="trash.png"
-                  alt="unfinished bingo card"
-                  onclick="removePSM_TT()"
-                />
-              </div>
-              <div class="col-lg-4">
-                <button class="btn check" id="actualTT">Actual TT</button>
-              </div>
-              <div class="col-sm-2">
-                <img
-                  id="removelastactualTT"
-                  src="trash.png"
-                  alt="unfinished bingo card"
-                  onclick="removeActualTT()"
-                />
-              </div>
-            </div>
-            <br />
+.PMS {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
 
-            <div class="row">
-              <div class="col-lg-6">
-                <button class="btn check" id="readarray" style="padding: 0px">
-                  Generate Graph
-                </button>
-              </div>
+  opacity: 0.9;
+}
 
-              <!--<div class="col-lg-6">
-                <button
-                  class="btn check"
-                  id="export"
-                  class="btn-download"
-                  style="margin-left: 10px"
-                >
-                  Export Table
-                </button>
-              </div>-->
-            </div>
-            <!--<h1 id="testreport">Relay Tested Report</h1>
-          <div class="row">
-            <div class="col-sm-3">
-              <button class="btn check" id="tested13" class="btn-download" style="margin-left: 10px">
-                Relay trip Time 1.3
-              </button>
-            </div>
-            <div class="col-sm-3">
-              <button class="btn check" id="EItested" class="btn-download" style="margin-left: 10px">
-                Relay trip Time EI
-              </button>
-            </div>
-          </div>-->
-            <br />
-          </div>
-          <div class="col-lg-1"></div>
-          <div class="container">
-            <div class="col-lg-8" id="tableandgraph" class="rep">
-              <div class="row">
-                <div class="col-lg-10">
-                  <div class="row">
-                    <div class="col-lg-5">
-                      <p
-                        style="
-                          color: black;
-                          font-size: medium;
-                          font-weight: 900;
-                        "
-                      >
-                        Relay Serial Number :
-                      </p>
-                    </div>
-                    <div class="col-lg-6">
-                      <p
-                        id="actslno"
-                        style="
-                          color: black;
-                          font-size: medium;
-                          font-weight: 900;
-                        "
-                      ></p>
-                    </div>
-                  </div>
-                  <br />
-                  <p id="tableappearsbelow">Graph and Table Appears below</p>
-                </div>
-                <div class="col-lg-2">
-                  <button
-                    class="btn check"
-                    style="color: black"
-                    id="export"
-                    class="btn-download"
-                  >
-                    Export
-                  </button>
-                </div>
-              </div>
-              <div class="container" id="tabs" style="width: 100%">
-                <br />
-                <div
-                  id="graph"
-                  class="tabs"
-                  style="width: 100%; height: 200%; border: 2px solid black"
-                ></div>
-              </div>
-              <div class="container" id="tables">
-                <div class="row">
-                  <div class="col-sm-8" id="tab1">
-                    <table id="table1" style="margin-top: 10px">
-                      <th>TMS</th>
-                      <th>PSM</th>
-                      <th>TT</th>
-                    </table>
-                  </div>
+#In {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
 
-                  <div class="col-sm-2" id="tab2">
-                    <table id="table4" style="margin-top: 10px">
-                      <th>ACT-TT</th>
-                    </table>
-                  </div>
-                  <div class="col-sm-2" id="tab2">
-                    <table id="table5" style="margin-top: 10px; color: red">
-                      <th>Deviation</th>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="script2.js"></script>
-  </body>
-</html>
+  opacity: 0.9;
+}
+
+#IDMT {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+.TMS {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+#serialno {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+.T {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  color: black;
+  box-sizing: border-box;
+  background-color: #1267b3;
+  background: linear-gradient(to left, #1267b3 50%, #ffff 100%);
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+#submitbtn {
+  width: 100%;
+  padding: 0px;
+  margin-left: 10px;
+  display: inline-block;
+  border: 5px solid rgb(238, 142, 39);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+#export {
+  width: 70px;
+  margin-left: 10px;
+  padding: 0px;
+  display: inline-block;
+  border: 5px solid rgb(201, 26, 232);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+#table1 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+  opacity: 0.7;
+}
+
+#table1 td,
+#table1 th {
+  border: 1px solid white;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+#tables {
+  width: auto;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 1;
+}
+
+#table1 {
+  background-color: #000000;
+}
+
+#table1 th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #000000;
+  /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
+  color: rgb(255, 255, 255);
+}
+
+/*-------------------- */
+#table2 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 10px;
+  overflow-y: scroll;
+  opacity: 0.7;
+}
+
+#table2 td,
+#table2 th {
+  border: 1px solid white;
+  padding: 8px;
+  color: rgb(251, 251, 251);
+  font-weight: 700;
+}
+
+#table2 {
+  background-color: #000000;
+}
+
+#table2 th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #000000;
+  /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
+  color: rgb(255, 255, 255);
+}
+
+#readarray {
+  width: 100%;
+  padding: 0px;
+  margin-left: 10px;
+  display: inline-block;
+  border: 5px solid rgb(91, 221, 58);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  text-align: center;
+}
+
+#removerow {
+  width: 100%;
+  padding: 0px;
+  margin-left: 10px;
+  display: inline-block;
+  border: 5px solid rgb(250, 53, 19);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  text-align: center;
+}
+
+h1 {
+  padding-left: 18px;
+  font-weight: 200;
+  font-family: "Times New Roman", Times, serif;
+  color: #360202;
+}
+
+#navbar {
+  background-color: #6da9d2;
+  background: linear-gradient(to right, #010101 20%, #ffff 100%);
+}
+
+#graph {
+  float: center;
+}
+
+h3 {
+  color: white;
+  float: Left;
+}
+
+#IDMT_Auto_Generate {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+#Interval {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+#iterations {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+#autogenerateheading {
+  margin-left: 15px;
+  color: azure;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+#tableappearsbelow {
+  margin-left: 10px;
+  color: azure;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+#AutoGraph {
+  width: 100%;
+  padding: 0px;
+  margin-left: 10px;
+  display: inline-block;
+  border: 5px solid rgb(91, 221, 58);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+#AutoGraphAll {
+  width: 100%;
+  padding: 0px;
+  margin-left: 10px;
+  display: inline-block;
+  border: 5px solid rgb(91, 221, 58);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+/* Second****************************************************/
+.PS {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+.secur {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+.timerec {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+.timerec {
+  width: 5%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+.triptimeActual {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+.P {
+  width: 80%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  color: black;
+  box-sizing: border-box;
+  background-color: #1267b3;
+  background: linear-gradient(to left, #1267b3 50%, #ffff 100%);
+  margin-left: 10px;
+
+  opacity: 0.9;
+}
+
+#table3 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 10px;
+  opacity: 0.7;
+}
+
+#table3 td,
+#table3 th {
+  border: 1px solid white;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+#table3 {
+  background-color: #000000;
+}
+
+#table3 th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #000000;
+  /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
+  color: rgb(255, 255, 255);
+}
+
+#table4 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+  opacity: 0.7;
+}
+
+#table4 td,
+#table4 th {
+  border: 1px solid white;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+#table4 {
+  background-color: #000000;
+}
+
+#table4 th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #000000;
+  /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
+  color: rgb(255, 255, 255);
+}
+
+#actualTT {
+  width: 100%;
+  padding: 0px;
+  margin-left: 10px;
+  display: inline-block;
+  border: 5px solid rgb(250, 53, 19);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  text-align: center;
+}
+
+#removelastentry {
+  width: 30px;
+  height: 30px;
+}
+
+#removelastactualTT {
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+
+#table5 {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+  opacity: 0.7;
+}
+
+#table5 td,
+#table5 th {
+  border: 1px solid white;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+#table5 {
+  background-color: #000000;
+}
+
+#table5 th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #000000;
+  /*background: linear-gradient(to right, #000000 70%, #ffff 100%);*/
+  color: rgb(255, 255, 255);
+}
+
+/************************************3rd page*/
+#IDMTTheory {
+  width: 100%;
+  margin-left: 10px;
+  display: inline-block;
+  border: 5px solid rgb(91, 221, 58);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  padding: 0px;
+}
+
+#AcualvsIdeal {
+  width: 100%;
+  margin-left: 10px;
+  font-size: larger;
+  display: inline-block;
+  border: 5px solid rgb(152, 21, 217);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  font-weight: bold;
+  padding: 0px;
+}
+
+#userpage {
+  margin-top: 10%;
+}
+
+#userpageheading {
+  margin-top: 50px;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#removeallTT {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+#reportgen {
+  width: 100%;
+  margin-left: 10px;
+  font-size: larger;
+  display: inline-block;
+  border: 5px solid rgb(233, 184, 36);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+  font-weight: bold;
+  padding: 0px;
+}
+
+#newTMS {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+#tested13 {
+  width: 100%;
+  margin-left: 0px;
+  display: inline-block;
+  border: 5px solid rgb(201, 26, 232);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+#EItested {
+  width: 100%;
+  margin-left: 0px;
+  display: inline-block;
+  border: 5px solid rgb(201, 26, 232);
+  border-radius: 4px;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+
+#testreport {
+  margin-top: 50px;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ccc;
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-color: #87ceeb;
+  }
+}
