@@ -3,6 +3,9 @@ PSMVal = [];
 actualTripTime = [];
 deviation = [];
 secInjCur = [0, 0];
+// $(".T").hide();
+// $(".P").hide();
+
 $("#submitbtn").click(function () {
   const actsl = document.querySelector("#serialno").value;
   document.querySelector("#actslno").textContent = actsl;
