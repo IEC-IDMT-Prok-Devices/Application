@@ -317,6 +317,15 @@ function autoCurveGenerator() {
         enableMouseTracking: false,
       },
     },
+    plotOptions: {
+      series: {
+        marker: {
+          enabled: true,
+          symbol: "circle",
+          radius: 1,
+        },
+      },
+    },
     chart: {
       type: "line",
       zoomType: "y",
@@ -2471,6 +2480,7 @@ function autoCurveGeneratorAll() {
         "1000",
       ],
     },
+
     yAxis: {
       title: {
         text: "<b>Trip Time</b>",
