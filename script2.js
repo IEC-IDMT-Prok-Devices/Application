@@ -344,6 +344,7 @@ function curveGenerator() {
     xAxis: {
       categories: PSMVal,
     },
+
     yAxis: {
       title: {
         text: "<b>Trip Time</b>",
@@ -370,13 +371,13 @@ function curveGenerator() {
       {
         name: "Ideal Trip Time",
         lineColor: "green",
-        color: "black",
+        color: "green",
         data: tripTime,
       },
       {
         name: "Actual Trip Time",
         lineColor: "red",
-        color: "black",
+        color: "red",
         data: actualTripTime,
         tooltip: {
           headerFormat: "<b>{point.x}</b>  ",
