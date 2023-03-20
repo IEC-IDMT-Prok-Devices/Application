@@ -313,10 +313,8 @@ function autoCurveGenerator() {
       },*/
     },
     plotOptions: {
-      line: {
-        dataLabels: {
-          enabled: false,
-        },
+      series: {
+        enableMouseTracking: false,
       },
     },
     chart: {
@@ -2496,6 +2494,11 @@ function autoCurveGeneratorAll() {
         },
       },
     },
+    plotOptions: {
+      series: {
+        enableMouseTracking: false,
+      },
+    },
     chart: {
       type: "line",
       zoomType: "y",
@@ -2649,6 +2652,7 @@ document.querySelector("#AutoGraphAll").addEventListener("click", function () {
   EIAll();
   autoCurveGeneratorAll();
   document.getElementById("export").style.display = "none";
+  $("#table1").remove();
 });
 
 //To delete last row
