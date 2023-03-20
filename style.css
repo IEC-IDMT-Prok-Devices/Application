@@ -5,7 +5,7 @@ body {
 }
 
 .PMS {
-  width: 100%;
+  width: 80%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -222,7 +222,7 @@ h3 {
 }
 
 #IDMT_Auto_Generate {
-  width: 100%;
+  width: 80%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -235,7 +235,7 @@ h3 {
 }
 
 #Interval {
-  width: 100%;
+  width: 80%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -248,7 +248,7 @@ h3 {
 }
 
 #iterations {
-  width: 100%;
+  width: 80%;
   padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
